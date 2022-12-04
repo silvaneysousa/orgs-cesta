@@ -1,18 +1,12 @@
 import React from "react";
-import { Image, StyleSheet, Dimensions, Text, View  } from "react-native";
+import { Image, StyleSheet, View  } from "react-native";
 
-import Texto from "../componentes/Texto";
+import Texto from "../../../componentes/Texto";
 
-import topo from '../../assets/topo.png';
-import logoFazenda from '../../assets/logo.png';
+import logoFazenda from '../../../../assets/logo.png';
 
-const width = Dimensions.get('screen').width;
-
-export default function Cesta() {
+export default function Detalhes() {
     return <>
-        <Image source={topo} style={estilos.topo} />
-        <Texto style={estilos.titulo} >Detalhe da Cesta</Texto>
-
         <View style={estilos.cesta} >
             <Texto style={estilos.nome} >Cesta de Verduras</Texto>
             <View style={estilos.IDfazenda}>
@@ -26,24 +20,6 @@ export default function Cesta() {
 }
 
 const estilos = StyleSheet.create({
-    topo: {
-        width: "100%",
-        height: 578 / 768 * width,
-    },
-    titulo: {
-        width: "100%",
-        position: "absolute",
-        textAlign: "center",
-        fontSize: 16,
-        lineHeight: 26,
-        color: "white",
-        fontWeight: "bold",
-        padding: 16,
-    },
-    cesta: {
-        paddingVertical: 8,
-        paddingHorizontal: 16,
-    },
     nome: {
         fontSize: 26,
         lineHeight: 42,
@@ -76,4 +52,3 @@ const estilos = StyleSheet.create({
         marginTop: 8,
     },
 });
-
