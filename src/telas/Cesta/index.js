@@ -3,19 +3,18 @@ import { StyleSheet, View } from "react-native";
 
 import Topo from "./Componentes/Topo";
 import Detalhes from "./Componentes/Detalhes";
+import Botao from "./Componentes/Botao";
 
-
-export default function Cesta() {
+export default function Cesta({topo, detalhes}) {
     return <>
         
-        <Topo />
-        
+        <Topo {...topo} />
+
         <View style={estilos.cesta} >
-            <Detalhes />
+            <Detalhes {...detalhes} />
         </View>
     </>
 }
-
 
 const estilos = StyleSheet.create({
     cesta: {
